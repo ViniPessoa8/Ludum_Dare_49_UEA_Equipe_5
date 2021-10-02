@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Eye_Detector : MonoBehaviour
 {
-
+    public Animator animEye;
+    public Animator animPupil;
 
     void Start()
     {
@@ -18,7 +19,8 @@ public class Eye_Detector : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col){
         if(col.gameObject.tag == "Player"){
-            Debug.Log("Player");
+            animEye.SetBool("detected", true);
+            animPupil.SetBool("detected", true);
         }
     }
 }
