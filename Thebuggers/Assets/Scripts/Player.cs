@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Move();
@@ -42,7 +41,7 @@ public class Player : MonoBehaviour
 
     void Jump()
     {
-        if(Input.GetButtonDown("Jump")){
+        if(Input.GetButtonDown("Jump") && jumping == false){
             rig.AddForce(new Vector2(0f,JumpForce), ForceMode2D.Impulse);
         }
 
