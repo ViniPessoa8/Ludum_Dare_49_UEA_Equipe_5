@@ -22,6 +22,7 @@ public class Plataforma : MonoBehaviour
     private Vector3 targetPosition;
     private float timer;
 
+    public float smoothyness = 10.0f;
     public BoxState boxState { get; private set; } = BoxState.None;
     public GameControl gameController;
 
@@ -39,9 +40,7 @@ public class Plataforma : MonoBehaviour
 
     void tremer()
     {
-        float smoothyness = 10.0f;
-        float randomFactor = gameController.actualTime;// * (1 / gameController.timeLimit);
-        // float range = 0.06f * Time.deltaTime;
+        float randomFactor = gameController.actualTime;
         float randomNumber = Random.Range(-randomFactor,randomFactor);
         Debug.Log(randomNumber);
 
@@ -50,17 +49,6 @@ public class Plataforma : MonoBehaviour
 
         // Dampen towards the target rotation
         transform.rotation = Quaternion.Slerp(transform.rotation, target,  Time.deltaTime * smoothyness);
-
-        // var xOffset = Mathf.PerlinNoise ( Time.deltaTime * shakeSpeed, 0 );
-        // var yOffset = Mathf.PerlinNoise ( 0, Time.deltaTime * shakeSpeed );
-
-        // transform.position = originalPosition + new Vector3 ( xOffset, yOffset, 0 ) * shakeFactor;
-        // timer += Time.deltaTime;
-        // if ( timer > shakeTime )
-        // {
-        //     boxState = BoxState.Falling;
-        //     timer = 0;
-        // }
     }
 
     void cair()
