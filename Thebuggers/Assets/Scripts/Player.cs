@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public float Speed; 
     public float JumpForce;
     private bool jumping;
+    private bool dead;
     private Rigidbody2D rig;
     private Animator animator; 
 
@@ -18,8 +19,10 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        Move();
-        Jump();
+        if(!dead){
+            Move();
+            Jump();
+        }
     }
 
     void Move()
@@ -63,4 +66,12 @@ public class Player : MonoBehaviour
             animator.SetBool("jump",true);
         }
     }
+
+    void OnTriggerEnter2D(Collider2D collision){
+        if(collision.gameObject.tag == "Eye"){
+            animator.SetBool("dead",true);
+            dead = true;
+        }
+    }
+
 }
