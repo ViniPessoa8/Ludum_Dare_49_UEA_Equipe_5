@@ -28,17 +28,20 @@ public class Player : MonoBehaviour
     void Move()
     {
         float movement = Input.GetAxis("Horizontal");
-        rig.velocity = new Vector2(movement * Speed, rig.velocity.y);
-        if(Input.GetAxis("Horizontal") > 0f){
-            animator.SetBool("walk",true);
-            transform.eulerAngles = new Vector3(0f,0f,0f);
-        }
-        if(Input.GetAxis("Horizontal") < 0f){
-            animator.SetBool("walk",true);
-            transform.eulerAngles = new Vector3(0f,180f,0f);
-        }
-        if(Input.GetAxis("Horizontal") == 0f){
-            animator.SetBool("walk",false);
+        if (!jumping)
+        {
+            rig.velocity = new Vector2(movement * Speed, rig.velocity.y);
+            if(Input.GetAxis("Horizontal") > 0f){
+                animator.SetBool("walk",true);
+                transform.eulerAngles = new Vector3(0f,0f,0f);
+            }
+            if(Input.GetAxis("Horizontal") < 0f){
+                animator.SetBool("walk",true);
+                transform.eulerAngles = new Vector3(0f,180f,0f);
+            }
+            if(Input.GetAxis("Horizontal") == 0f){
+                animator.SetBool("walk",false);
+            }
         }
     }
 
