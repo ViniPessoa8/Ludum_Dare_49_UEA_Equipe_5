@@ -44,4 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: Main_Menu
-  TimeLeft: 15
+  timeLimit: 15
+  actualTime: 0

@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class GameControl : MonoBehaviour
 {
     public string nextScene;
-    public int TimeLeft;
+    public int timeLimit;
 
     private float initialTime;
-    private float actualTime;
+    public float actualTime;
 
     public void Start()
     {
@@ -19,7 +19,7 @@ public class GameControl : MonoBehaviour
     }
 
     public void Update(){
-        countTime(TimeLeft);
+        countTime(timeLimit);
     }
 
     public void exitgame() 

@@ -441,9 +441,8 @@ GameObject:
   - component: {fileID: 762374623}
   - component: {fileID: 762374622}
   - component: {fileID: 762374621}
-  - component: {fileID: 762374625}
   m_Layer: 8
-  m_Name: Plataforma
+  m_Name: Floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -561,32 +560,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &762374625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 762374620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b398efbf78ddd78778c8852746148a76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallSpeed: 3
-  target: {fileID: 0}
-  gameController: {fileID: 1689004577}
---- !u!114 &1689004577 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 892654431745233662, guid: 600a13658a821b2378b0ae79b60a53b7, type: 3}
-  m_PrefabInstance: {fileID: 2108122270}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e054322dc551743afaeb6c3982ae0a04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1698560791
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,10 +871,6 @@ PrefabInstance:
     - target: {fileID: 892654431745233661, guid: 600a13658a821b2378b0ae79b60a53b7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 892654431745233662, guid: 600a13658a821b2378b0ae79b60a53b7, type: 3}
-      propertyPath: timeLimit
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 892654431745233663, guid: 600a13658a821b2378b0ae79b60a53b7, type: 3}
       propertyPath: m_Name
