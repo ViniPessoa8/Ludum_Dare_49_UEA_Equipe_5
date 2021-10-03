@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1130096959}
   - component: {fileID: 1130096954}
   - component: {fileID: 1130096953}
+  - component: {fileID: 1077747358}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -33,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 4934785248853137770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -3.83, y: 4.01, z: 0}
-  m_LocalScale: {x: 10.26951, y: 9.58818, z: 0.6545}
+  m_LocalScale: {x: 6.6351304, y: 6.1949224, z: 0.42287245}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -57,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -117,7 +118,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4934785248853137770}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -148,8 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98444c23279d487408befbee9b1e4ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  JumpForce: 3
+  Speed: 3
+  JumpForce: 7
   jumpSound: {fileID: 1130096953}
   walkSound: {fileID: 1130096954}
 --- !u!95 &4934785248853137780
@@ -178,7 +179,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4934785248853137770}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -379,3 +380,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1077747358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4934785248853137770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.028086634, y: -0.061087288, z: 0}
+  - {x: 0.028086623, y: -0.056381475, z: 0}
+  - {x: 0.017834863, y: 0.061087232, z: 0}
+  - {x: -0.02369292, y: 0.05794996, z: 0}
+  m_ShapePathHash: -434046416
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 33572
