@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
     private Rigidbody2D rig;
     private Animator animator; 
 
+    public AudioSource jumpSound;
+    public AudioSource walkSound;
+
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
@@ -24,23 +27,24 @@ public class Player : MonoBehaviour
         Jump();
     }
 
+    void PlayWalkSound(){
+        walkSound.Play();
+    }
+
     void Move()
     {
         float movement = Input.GetAxis("Horizontal");
-        if (!jumping)
-        {
-            rig.velocity = new Vector2(movement * Speed, rig.velocity.y);
-            if(Input.GetAxis("Horizontal") > 0f){
-                animator.SetBool("walk",true);
-                transform.eulerAngles = new Vector3(0f,0f,0f);
-            }
-            if(Input.GetAxis("Horizontal") < 0f){
-                animator.SetBool("walk",true);
-                transform.eulerAngles = new Vector3(0f,180f,0f);
-            }
-            if(Input.GetAxis("Horizontal") == 0f){
-                animator.SetBool("walk",false);
-            }
+        rig.velocity = new Vector2(movement * Speed, rig.velocity.y);
+        if(Input.GetAxis("Horizontal") > 0f){
+            animator.SetBool("walk",true);
+            transform.eulerAngles = new Vector3(0f,0f,0f);
+        }
+        if(Input.GetAxis("Horizontal") < 0f){
+            animator.SetBool("walk",true);
+            transform.eulerAngles = new Vector3(0f,180f,0f);
+        }
+        if(Input.GetAxis("Horizontal") == 0f){
+            animator.SetBool("walk",false);
         }
     }
 
@@ -48,6 +52,7 @@ public class Player : MonoBehaviour
     {
         if(Input.GetButtonDown("Jump") && jumping == false){
             rig.AddForce(new Vector2(0f,JumpForce), ForceMode2D.Impulse);
+            jumpSound.Play();
         }
 
         if(rig.velocity.y < 0){
