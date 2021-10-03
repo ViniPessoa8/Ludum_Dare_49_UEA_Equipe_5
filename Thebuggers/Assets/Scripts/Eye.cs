@@ -34,7 +34,6 @@ public class Eye : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D col){
-        Debug.Log("trigger");
         if(col.gameObject.tag == "Player"){
             Debug.Log("Player");
         }
