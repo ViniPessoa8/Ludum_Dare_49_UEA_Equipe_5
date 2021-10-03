@@ -11,6 +11,9 @@ public class GameControl : MonoBehaviour
     private float initialTime;
     public float actualTime;
 
+    public Player player;
+    public Eye_Detector eye;
+
     public void Start()
     {
         actualTime = 0;
@@ -45,7 +48,8 @@ public class GameControl : MonoBehaviour
         if (actualTime > limit)
         {
             Debug.Log("Restart");
-            restartScene();
+            player.StartCoroutine("restartLevel");
+            eye.Detect();
         }
     }
 }

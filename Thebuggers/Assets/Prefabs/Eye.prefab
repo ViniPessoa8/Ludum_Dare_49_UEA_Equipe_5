@@ -216,6 +216,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animEye: {fileID: 7850859147472382283}
   animPupil: {fileID: 1548368127}
+  animBackground: {fileID: 1802750621823559317}
+  background: {fileID: 0}
 --- !u!1 &7850859147832588257
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,6 +230,7 @@ GameObject:
   - component: {fileID: 7850859147832588261}
   - component: {fileID: 7850859147832588260}
   - component: {fileID: 7850859147832588259}
+  - component: {fileID: 1802750621823559317}
   m_Layer: 6
   m_Name: Eye_background
   m_TagString: Untagged
@@ -349,6 +352,25 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!95 &1802750621823559317
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850859147832588257}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 769e36d43f84f7e42914a1e6f15e3204, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7850859148187409691
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -19,10 +20,8 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if(!dead){
-            Move();
-            Jump();
-        }
+        Move();
+        Jump();
     }
 
     void Move()
@@ -72,9 +71,15 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag == "Eye"){
-            animator.SetBool("dead",true);
-            dead = true;
+            StartCoroutine("restartLevel");
         }
+    }
+
+    IEnumerator restartLevel(){
+        animator.SetBool("dead",true);
+        rig.bodyType = RigidbodyType2D.Static;
+        yield return new WaitForSeconds(4f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
 }
