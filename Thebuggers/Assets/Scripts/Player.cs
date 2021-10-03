@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    void Update()
+    void LateUpdate()
     {
         Move();
         Jump();

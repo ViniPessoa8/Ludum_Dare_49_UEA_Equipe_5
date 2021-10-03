@@ -33,7 +33,7 @@ public class GameControl : MonoBehaviour
         Application.Quit();  
     }  
 
-    public void goToNextScene()
+    public void goToNextScene(string nextScene)
     {
         SceneManager.LoadScene(nextScene);
     }
@@ -52,5 +52,10 @@ public class GameControl : MonoBehaviour
             player.StartCoroutine("restartLevel");
             eye.Detect();
         }
+    }
+
+    public void backToMenu(){
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Main_Menu");
     }
 }
