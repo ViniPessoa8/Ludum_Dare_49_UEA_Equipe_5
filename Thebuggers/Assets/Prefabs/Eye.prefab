@@ -1,5 +1,79 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1068579939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1068579940}
+  - component: {fileID: 1068579941}
+  m_Layer: 6
+  m_Name: BackLight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1068579940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068579939}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.91, y: 1.93, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7850859147371948850}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1068579941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068579939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 1
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.572
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1.84
+  m_LightVolumeOpacity: 0.04
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0.435
+  m_ShadowVolumeIntensity: 0.765
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 8.72
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -1.7321918, y: -0.063825965, z: 0}
+  - {x: -0.63405263, y: -1.2960179, z: 0}
+  - {x: 0.54593116, y: -1.2785549, z: 0}
+  - {x: 1.5690721, y: -0.07907617, z: 0}
+  - {x: 0.65777, y: 1.3120313, z: 0}
+  - {x: -0.6199479, y: 1.3203812, z: 0}
 --- !u!1 &7850859147371948849
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,6 +105,7 @@ Transform:
   - {fileID: 7850859147472382282}
   - {fileID: 7850859148187409692}
   - {fileID: 7850859147832588258}
+  - {fileID: 1068579940}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -90,7 +165,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,7 +185,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 54c0d2214b62b4f45b3be26102f88077, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -166,15 +241,30 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.33622086, y: 0.18767709}
-      - {x: -0.12, y: 0.14}
-      - {x: -0.16, y: 0.12}
-      - {x: -0.16, y: -0.12}
-      - {x: -0.13463816, y: -0.19862464}
-      - {x: 0.095300615, y: -0.21498881}
-      - {x: 0.20013642, y: -0.2113001}
-      - {x: 1.0728679, y: -0.20218837}
-      - {x: 1.0690755, y: 0.29740247}
+    - - {x: 0.2897768, y: 0.29271317}
+      - {x: 0.07588126, y: 0.2885865}
+      - {x: 0.06021654, y: 0.14353365}
+      - {x: -0.43733382, y: 0.07599527}
+      - {x: -0.44175798, y: 0.2924399}
+      - {x: -0.65239406, y: 0.298464}
+      - {x: -0.65610874, y: 0.18784064}
+      - {x: -0.5927559, y: 0.1870397}
+      - {x: -0.5948199, y: 0.0005427748}
+      - {x: -0.51715165, y: -0.0038204235}
+      - {x: -0.5257336, y: -0.07081754}
+      - {x: -0.22277933, y: -0.07346969}
+      - {x: -0.22762775, y: -0.14862692}
+      - {x: -0.29315507, y: -0.15110487}
+      - {x: -0.30311316, y: -0.21540877}
+      - {x: -0.1434723, y: -0.29580027}
+      - {x: -0.37642983, y: -0.30055854}
+      - {x: -0.37843823, y: -0.44193158}
+      - {x: -0.14145446, y: -0.44114295}
+      - {x: 0.6577451, y: -0.44098788}
+      - {x: 0.6614842, y: 0.06934562}
+      - {x: 0.23193395, y: 0.073191635}
+      - {x: 0.2246584, y: 0.14603265}
+      - {x: 0.28996727, y: 0.14643396}
     - - {x: -0.11, y: 0}
       - {x: -0.04, y: 0.07}
       - {x: 0.04, y: 0.07}
@@ -468,7 +558,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -488,7 +578,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 34f37d90cca69194cae529626e05e11d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -622,7 +712,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -642,7 +732,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 1127147a6b2e414428e13bfe9b2ba42c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -791,7 +881,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
