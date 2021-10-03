@@ -7,6 +7,8 @@ public class MainMenu_Controller : MonoBehaviour
 {
     public string nextScene;
     public int timeLimit;
+    public GameObject credits;
+    public GameObject mainmenu;
 
     public void exitgame() 
     {  
@@ -22,6 +24,11 @@ public class MainMenu_Controller : MonoBehaviour
     public void restartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void openCredits(){
+        credits.SetActive(true);
+        mainmenu.SetActive(false);
     }
 }
 
