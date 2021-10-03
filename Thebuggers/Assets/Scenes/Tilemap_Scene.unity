@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &362158709 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2192125786623212278, guid: cc2ff000a43d34244be22512c7381a32, type: 3}
+  m_PrefabInstance: {fileID: 2192125786296705155}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &391433123 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3566446532151064141, guid: 33273304adad46a44b2a65f2f42fddd2, type: 3}
@@ -958,7 +963,7 @@ TilemapCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
@@ -2494,6 +2499,10 @@ PrefabInstance:
       propertyPath: background
       value: 
       objectReference: {fileID: 391433123}
+    - target: {fileID: 7850859147472382287, guid: d6f3dcdf50bd9204aba9d86abd0e6486, type: 3}
+      propertyPath: backgroundNoise
+      value: 
+      objectReference: {fileID: 362158709}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f3dcdf50bd9204aba9d86abd0e6486, type: 3}
 --- !u!114 &2141829538 stripped
@@ -2507,6 +2516,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98444c23279d487408befbee9b1e4ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &2192125786296705155
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2192125786623212276, guid: cc2ff000a43d34244be22512c7381a32, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192125786623212276, guid: cc2ff000a43d34244be22512c7381a32, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.4133086
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192125786623212276, guid: cc2ff000a43d34244be22512c7381a32, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.04008
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192125786623212276, guid: cc2ff000a43d34244be22512c7381a32, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3059.3574
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192125786623212276, guid: cc2ff000a43d34244be22512c7381a32, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192125786623212276, guid: cc2ff000a43d34244be22512c7381a32, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192125786623212276, guid: cc2ff000a43d34244be22512c7381a32, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192125786623212276, guid: cc2ff000a43d34244be22512c7381a32, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192125786623212276, guid: cc2ff000a43d34244be22512c7381a32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192125786623212276, guid: cc2ff000a43d34244be22512c7381a32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192125786623212276, guid: cc2ff000a43d34244be22512c7381a32, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2192125786623212278, guid: cc2ff000a43d34244be22512c7381a32, type: 3}
+      propertyPath: m_Name
+      value: Audio Controller
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc2ff000a43d34244be22512c7381a32, type: 3}
 --- !u!1001 &3301905680420291106
 PrefabInstance:
   m_ObjectHideFlags: 0

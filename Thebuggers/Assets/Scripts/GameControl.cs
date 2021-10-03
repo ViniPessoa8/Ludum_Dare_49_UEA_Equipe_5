@@ -22,7 +22,9 @@ public class GameControl : MonoBehaviour
     }
 
     public void Update(){
-        countTime(timeLimit);
+        if(actualTime <= timeLimit){
+            countTime(timeLimit);
+        }
     }
 
     public void exitgame() 
@@ -47,7 +49,6 @@ public class GameControl : MonoBehaviour
 
         if (actualTime > limit)
         {
-            Debug.Log("Restart");
             player.StartCoroutine("restartLevel");
             eye.Detect();
         }

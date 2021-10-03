@@ -9,6 +9,9 @@ public class Eye_Detector : MonoBehaviour
     public Animator animBackground;
     public GameObject background;
     public Tremor tremor;
+    public GameObject backgroundNoise;
+
+    public AudioSource eyeDetecting;
 
     void Start()
     {
@@ -27,10 +30,12 @@ public class Eye_Detector : MonoBehaviour
     }
 
     public void Detect(){
+        eyeDetecting.Play();
         animEye.SetBool("detected", true);
         animPupil.SetBool("detected", true);
         animBackground.SetBool("detected", true);
         Destroy(background);
         Destroy(tremor);
+        Destroy(backgroundNoise);
     }
 }
