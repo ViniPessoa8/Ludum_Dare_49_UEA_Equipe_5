@@ -10,6 +10,8 @@ public class Next_Level_Door : MonoBehaviour
     
     public GameObject player;
     public AudioSource openingSound;
+    public GameObject levelAudio;
+    public GameObject timer;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -26,6 +28,8 @@ public class Next_Level_Door : MonoBehaviour
             anim.SetBool("open", true);
             openingSound.Play();
             player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            Destroy(levelAudio);
+            timer.GetComponent<GameControl>().actualTime = 0;
             StartCoroutine("openingDoor");
         }
     }

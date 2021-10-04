@@ -15,7 +15,7 @@ public class GameControl : MonoBehaviour
     public List<GameObject> allEyes = new List<GameObject>();
 
     public AudioSource timeEnding;
-
+    public GameObject backgroundFading;
     public void Start()
     {
         actualTime = 0;
@@ -26,6 +26,7 @@ public class GameControl : MonoBehaviour
     public void Update(){
         if(actualTime >= timeLimit - 31 && actualTime <= timeLimit - 30){
             timeEnding.Play();
+            backgroundFading.GetComponent<Background_Fade>().StartCoroutine("FadeTo");
         }
         if(actualTime <= timeLimit){
             countTime(timeLimit);

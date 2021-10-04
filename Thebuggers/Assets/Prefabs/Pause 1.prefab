@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5179251157553574219
 Transform:
   m_ObjectHideFlags: 0
@@ -121,6 +121,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5179251157553574219}
     m_Modifications:
+    - target: {fileID: 6275630321560246237, guid: 85c5acd1b6a05a14093b323e66f8fa44, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6275630321888288193, guid: 85c5acd1b6a05a14093b323e66f8fa44, type: 3}
       propertyPath: m_Name
       value: Pause
@@ -138,8 +142,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6275630321888288195, guid: 85c5acd1b6a05a14093b323e66f8fa44, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275630321888288195, guid: 85c5acd1b6a05a14093b323e66f8fa44, type: 3}
       propertyPath: m_ReferenceResolution.x
       value: 587.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6275630321888288195, guid: 85c5acd1b6a05a14093b323e66f8fa44, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 371.69
       objectReference: {fileID: 0}
     - target: {fileID: 6275630321888288197, guid: 85c5acd1b6a05a14093b323e66f8fa44, type: 3}
       propertyPath: m_Pivot.x
