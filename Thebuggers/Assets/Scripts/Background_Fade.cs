@@ -4,24 +4,26 @@ using UnityEngine;
 
 public class Background_Fade : MonoBehaviour
 {
-    private SpriteRenderer sprite;
-    void Start()
-    {
-        sprite = GetComponent<SpriteRenderer>();
-    }
-
-    void Update ()
+  public SpriteRenderer sprite;
+  private float time = 20.0f;
+  private float startValue = 0.0f;
+  void Start()
   {
-    StartCoroutine(FadeTo(0.0f, 20.0f));
+
+  }
+
+  void Update ()
+  {
+    
   }
   
-  IEnumerator FadeTo(float aValue, float aTime)
+  public IEnumerator FadeTo()
   {
-      float alpha = transform.GetComponent<SpriteRenderer>().material.color.a;
-      for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
+      float alpha = transform.GetComponent<Renderer>().material.color.a;
+      for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / time)
       {
-          Color newColor = new Color(1, 1, 1, Mathf.Lerp(alpha,aValue,t));
-          transform.GetComponent<SpriteRenderer>().material.color = newColor;
+          Color newColor = new Color(1, 1, 1, Mathf.Lerp(alpha,startValue,t));
+          transform.GetComponent<Renderer>().material.color = newColor;
           yield return null;
       }
   }
