@@ -19,17 +19,12 @@ public class BackgroundAudio_Controller : MonoBehaviour
     }
 
     IEnumerator CallSound(){
+        while(selectedSound != 200)
+        {
         yield return new WaitForSeconds(8f);
         selectedSound = Random.Range(0, 5);
         audioFile = allSounds[selectedSound];
         audioFile.Play();
-        yield return new WaitForSeconds(8f);
-        selectedSound = Random.Range(0, 5);
-        audioFile = allSounds[selectedSound];
-        audioFile.Play();
-        yield return new WaitForSeconds(8f);
-        selectedSound = Random.Range(0, 5);
-        audioFile = allSounds[selectedSound];
-        audioFile.Play();
+        }
     }
 }

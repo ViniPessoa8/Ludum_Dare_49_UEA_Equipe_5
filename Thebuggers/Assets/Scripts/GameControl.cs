@@ -12,7 +12,9 @@ public class GameControl : MonoBehaviour
     public float actualTime;
 
     public Player player;
-    public Eye_Detector eye;
+    public List<GameObject> allEyes = new List<GameObject>();
+
+    public AudioSource timeEnding;
 
     public void Start()
     {
@@ -22,6 +24,9 @@ public class GameControl : MonoBehaviour
     }
 
     public void Update(){
+        if(actualTime >= timeLimit - 31 && actualTime <= timeLimit - 30){
+            timeEnding.Play();
+        }
         if(actualTime <= timeLimit){
             countTime(timeLimit);
         }
@@ -45,16 +50,18 @@ public class GameControl : MonoBehaviour
 
     private void countTime(float limit){
         actualTime += Time.deltaTime;
-        Debug.Log(actualTime);
 
         if (actualTime > limit)
         {
+            foreach (GameObject eye in allEyes){
+                eye.GetComponent<Eye_Detector>().Detect();
+            }
             player.StartCoroutine("restartLevel");
-            eye.Detect();
         }
     }
 
     public void backToMenu(){
+        Debug.Log("Menu");
         Time.timeScale = 1f;
         SceneManager.LoadScene("Main_Menu");
     }

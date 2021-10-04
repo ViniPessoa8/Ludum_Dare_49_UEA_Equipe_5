@@ -5,7 +5,7 @@ using UnityEngine;
 public class OutOfBounds_Player : MonoBehaviour
 {
     public Player player;
-    public Eye_Detector eye;
+    public List<GameObject> allEyes = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +20,10 @@ public class OutOfBounds_Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col){
         if(col.gameObject.tag == "Player"){
+            foreach (GameObject eye in allEyes){
+                eye.GetComponent<Eye_Detector>().Detect();
+            }
             player.StartCoroutine("restartLevel");
-            eye.Detect();
         }
     }
 }
